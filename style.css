@@ -1,0 +1,99 @@
+
+*,
+*:before,
+*:after{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #fcfcfc;
+}
+.container{
+    width: 100vw;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+
+}
+.btn{
+    height: 100px;
+    width: 320px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: 20px 20px 25px rgba(0,0,0,0.1);
+            box-shadow: 20px 20px 25px rgba(0,0,0,0.1);
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn:before{
+    content: "HOVER ME";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 3px; 
+    position: absolute;
+    color: #fcfcfc;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 6px;
+    font-weight: 700;
+    padding: 32px 0;
+    background-color: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    cursor: pointer;
+}
+.btn:after{
+    content: "";
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    left: -90px;
+    top: -200px;
+    z-index: -1;
+    background-image: conic-gradient(
+        #FF2E4E,
+        #D960FF,
+        #9264FF,
+        #00B3F9,
+        #06CD69,
+        #ffcd00,
+        #FF5C22,
+        #FF2E4E
+    );
+    border-radius: 50%;
+}
+.btn:hover:after{
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+}
+@-webkit-keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
